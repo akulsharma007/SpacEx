@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.7.2",
@@ -14,7 +11,7 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -39,7 +36,11 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.11.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
     "ignore-styles": "^5.0.1",
+    "jest": "^24.9.0",
+    "jest-enzyme": "^7.1.2",
     "node-sass": "^4.14.1"
   }
 }

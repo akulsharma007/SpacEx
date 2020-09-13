@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 function Loader(props) {
   return props.show ? (
     <>
-      <div className="backdrop"></div>
-      <div className="loader-wrapper"></div>
+      <div className="backdrop" data-test="backdrop"></div>
+      <div className="loader-wrapper" data-test="loader"></div>
     </>
   ) : null;
 }

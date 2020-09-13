@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Programs(props) {
   return (
-    <div className="programs-wrapper">
+    <div className="programs-wrapper" data-test="programs-wrapper" tabIndex={0}>
       {props.fetchedData.map((ele, index) => (
         <section key={index}>
           <figure>
@@ -13,7 +13,7 @@ function Programs(props) {
           <header>
             {ele.mission_name} #{ele.flight_number}
           </header>
-          <section>
+          <section data-test="mission-ids">
             <header>Mission Ids:</header>
             {ele.mission_id.length !== 0 ? (
               <ul>
@@ -25,15 +25,21 @@ function Programs(props) {
               <div className="content-na">NA</div>
             )}
           </section>
-          <section>
+          <section data-test="launch-year">
             <header className="display-override">Launch Year:</header>
             <p className="content">{ele.launch_year}</p>
           </section>
-          <section>
+          <section data-test="successful-launch">
             <header className="display-override">Successful Launch:</header>
-            <p className="content">{ele.launch_success.toString()}</p>
+            <p className="content">
+              {ele.launch_success
+                ? typeof ele.launch_success == "boolean"
+                  ? ele.launch_success.toString()
+                  : ele.launch_success
+                : "NA"}
+            </p>
           </section>
-          <section>
+          <section data-test="successful-landing">
             <header className="display-override">Successful Landing:</header>
             <p className="content">
               {ele.launch_landing

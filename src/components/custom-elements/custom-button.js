@@ -6,6 +6,8 @@ function CustomButton(props) {
     <button
       className={props.styleClass}
       onClick={() => props.onClickHandler(props.children)}
+      tabIndex={0}
+      data-test="custom-button"
     >
       {props.children}
     </button>

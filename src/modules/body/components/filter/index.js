@@ -29,9 +29,9 @@ function Filter(props) {
   }
 
   return (
-    <div className="filter-wrapper">
+    <div className="filter-wrapper" data-test="filter-wrapper">
       <h4>Filters</h4>
-      <section>
+      <section data-test="launch-year-section">
         <header>Launch Year</header>
         <table>
           <tbody>
@@ -73,7 +73,7 @@ function Filter(props) {
           </tbody>
         </table>
       </section>
-      <section>
+      <section data-test="successful-launch-section">
         <header>Successful Launch</header>
         <table>
           <tbody>
@@ -102,7 +102,7 @@ function Filter(props) {
           </tbody>
         </table>
       </section>
-      <section>
+      <section data-test="successful-landing-section">
         <header>Successful Landing</header>
         <table>
           <tbody>
