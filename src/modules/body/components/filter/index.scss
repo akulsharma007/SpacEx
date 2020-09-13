@@ -1,0 +1,50 @@
+.filter-wrapper {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  h4 {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  section {
+    display: initial;
+    header {
+      font-size: 12px;
+      text-align: center;
+      padding-bottom: 2px;
+      margin-bottom: 10px;
+      border-bottom: solid black;
+      border-width: 1px;
+      margin-left: 15px;
+      margin-right: 15px;
+      position: unset;
+      width: unset;
+    }
+    .button-wrapper {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 18px;
+      .row {
+        margin-bottom: 8px;
+      }
+    }
+    table {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 18px;
+      width: 100%;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+      tr {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .adjustment {
+    float: right;
+  }
+  .selected-btn {
+    background-color: #7aba00;
+  }
+}
