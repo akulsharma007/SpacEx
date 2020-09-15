@@ -6,6 +6,7 @@ function Programs(props) {
   return (
     <div className="programs-wrapper" data-test="programs-wrapper" tabIndex={0}>
       {props.fetchedData &&
+        props.fetchedData.length !== 0 &&
         props.fetchedData.map((ele, index) => (
           <section key={index}>
             <figure>

@@ -13,6 +13,7 @@ function Body() {
 
   useEffect(() => {
     if (window && window.__STATE__) {
+      console.log(window.__STATE__);
       setFetchedData(window.__STATE__);
       delete window.__STATE__;
     } else {
