@@ -17,4 +17,8 @@ SpacEx App:-
 
    Note:- I did not use these to avoid unnecessary overhead as the application is very small, and to keep the bundle size small.
 
-4. Following are the screenshots of Lighthouse score:-
+4. Initial data is server side rendered
+
+5. Api for data doesn't return successful landing data for the key land_success, that is why it has been binded as NA at the UI.
+
+6. Following are the screenshots of Lighthouse score:-
