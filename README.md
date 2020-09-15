@@ -22,3 +22,5 @@ SpacEx App:-
 5. Api for data doesn't return successful landing data for the key land_success, that is why it has been binded as NA at the UI.
 
 6. Following are the screenshots of Lighthouse score:-
+
+![lighthouse-screenshot](https://user-images.githubusercontent.com/15700460/93187490-7b3f8100-f75d-11ea-9707-55f4a8d73a12.png)
