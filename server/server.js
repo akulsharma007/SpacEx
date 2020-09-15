@@ -20,6 +20,7 @@ app.use("^/$", (req, res, next) => {
     fetch(url)
       .then((response) => response.json())
       .then((fetchedData) => {
+        console.log(fetchedData[0]);
         const dataToSend = data
           .replace(
             '<div id="root"></div>',

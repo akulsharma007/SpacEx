@@ -12,10 +12,9 @@ function Body() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (window && window.__STATE__) {
-      console.log(window.__STATE__);
+    console.log(window.__STATE__);
+    if (window && window.__STATE__ && window.__STATE__.length !== 0) {
       setFetchedData(window.__STATE__);
-      delete window.__STATE__;
     } else {
       let url = "https://api.spaceXdata.com/v3/launches?limit=100";
       if (launchYear) {
@@ -37,6 +36,7 @@ function Body() {
         }
       });
     }
+    delete window.__STATE__;
   }, [launchYear, launchSuccess, landingSuccess]);
 
   return (
