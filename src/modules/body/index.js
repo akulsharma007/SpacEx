@@ -12,7 +12,6 @@ function Body() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log(window.__STATE__);
     if (window && window.__STATE__ && window.__STATE__.length !== 0) {
       setFetchedData(window.__STATE__);
     } else {
