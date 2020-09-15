@@ -32,7 +32,7 @@ function Programs(props) {
           <section data-test="successful-launch">
             <header className="display-override">Successful Launch:</header>
             <p className="content">
-              {ele.launch_success
+              {ele.launch_success !== undefined || ele.launch_success !== null
                 ? typeof ele.launch_success == "boolean"
                   ? ele.launch_success.toString()
                   : ele.launch_success

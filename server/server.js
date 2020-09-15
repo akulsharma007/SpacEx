@@ -20,12 +20,16 @@ app.use("^/$", (req, res, next) => {
     fetch(url)
       .then((response) => response.json())
       .then((fetchedData) => {
-        return res.send(
-          data.replace(
+        const dataToSend = data
+          .replace(
             '<div id="root"></div>',
             `<div id="root">${ReactDOMServer.renderToString(<App />)}</div>`
           )
-        );
+          .replace(
+            '<script>window.__STATE__="akul"</script>',
+            `<script>window.__STATE__=${JSON.stringify(fetchedData)}</script>`
+          );
+        return res.send(dataToSend);
       });
   });
 });

@@ -12,25 +12,30 @@ function Body() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    let url = "https://api.spaceXdata.com/v3/launches?limit=100";
-    if (launchYear) {
-      url += `&launch_year=${launchYear}`;
-    }
-    if (launchSuccess) {
-      url += `&launch_success=${launchSuccess}`;
-    }
-    if (landingSuccess) {
-      url += `&land_success=${landingSuccess}`;
-    }
-    setLoading(true);
-    fetch(url).then((response) => {
-      if (response.status === 200) {
-        response.json().then((data) => {
-          setFetchedData(data);
-          setLoading(false);
-        });
+    if (window && window.__STATE__) {
+      setFetchedData(window.__STATE__);
+      delete window.__STATE__;
+    } else {
+      let url = "https://api.spaceXdata.com/v3/launches?limit=100";
+      if (launchYear) {
+        url += `&launch_year=${launchYear}`;
       }
-    });
+      if (launchSuccess) {
+        url += `&launch_success=${launchSuccess}`;
+      }
+      if (landingSuccess) {
+        url += `&land_success=${landingSuccess}`;
+      }
+      setLoading(true);
+      fetch(url).then((response) => {
+        if (response.status === 200) {
+          response.json().then((data) => {
+            setFetchedData(data);
+            setLoading(false);
+          });
+        }
+      });
+    }
   }, [launchYear, launchSuccess, landingSuccess]);
 
   return (
